@@ -1,0 +1,19 @@
+diff -aurN mc-4.8.4.orig/misc/ext.d/web.sh.in mc-4.8.4/misc/ext.d/web.sh.in
+--- mc-4.8.4.orig/misc/ext.d/web.sh.in	2012-08-01 19:50:02.481573969 +0200
++++ mc-4.8.4/misc/ext.d/web.sh.in	2012-08-01 19:52:05.322514227 +0200
+@@ -12,6 +12,7 @@
+ 
+     case "${filetype}" in
+     html)
++        elinks -dump "${MC_EXT_FILENAME}" 2>/dev/null || \
+         links -dump "${MC_EXT_FILENAME}" 2>/dev/null || \
+             w3m -dump "${MC_EXT_FILENAME}" 2>/dev/null || \
+             lynx -dump -force_html "${MC_EXT_FILENAME}"
+@@ -29,6 +30,7 @@
+         (if test -n "@X11_WWW@" && test -n "$DISPLAY"; then
+             (@X11_WWW@ file://"${MC_EXT_CURRENTDIR}"/"${MC_EXT_BASENAME}" &) 1>&2
+         else
++            elinks "${MC_EXT_FILENAME}" || \
+             links "${MC_EXT_FILENAME}" || \
+                 lynx -force_html "${MC_EXT_FILENAME}" || \
+                 ${PAGER:-more} "${MC_EXT_FILENAME}"
