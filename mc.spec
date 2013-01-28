@@ -1,11 +1,11 @@
 Summary:	A user-friendly file manager and visual shell
 Name:		mc
-Version:	4.8.6
+Version:	4.8.7
 Release:	1
 License:	GPL v3
 Group:		Applications/Shells
 Source0:	http://www.midnight-commander.org/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	323706aa5e77698bed7b0b6faa7c1530
+# Source0-md5:	b113e50682293a953141134969dba785
 Patch0:		%{name}-elinks.patch
 URL:		http://www.ibiblio.org/mc/
 BuildRequires:	autoconf
@@ -34,9 +34,6 @@ FTP, view tar, zip files, and poke into RPMs for specific files. :-)
 %prep
 %setup -q
 %patch0 -p1
-
-rm -f po/stamp-po
-sed -i 's:|hxx|:|hh|hpp|hxx|:' misc/syntax/Syntax
 
 %build
 %{__gettextize}
