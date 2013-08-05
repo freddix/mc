@@ -1,11 +1,11 @@
 Summary:	A user-friendly file manager and visual shell
 Name:		mc
-Version:	4.8.9
+Version:	4.8.10
 Release:	1
 License:	GPL v3
 Group:		Applications/Shells
-Source0:	http://www.midnight-commander.org/downloads/%{name}-%{version}.tar.xz
-# Source0-md5:	0f8a05f9a9708241541ae177c8e2f209
+Source0:	http://www.midnight-commander.org/downloads/%{name}-%{version}.tar.bz2
+# Source0-md5:	eb4bdc23abd4fdfa14911d53d65c8186
 Patch0:		%{name}-elinks.patch
 URL:		http://www.ibiblio.org/mc/
 BuildRequires:	autoconf
