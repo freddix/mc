@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/.git
 Summary:	A user-friendly file manager and visual shell
 Name:		mc
 Version:	4.8.12
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Applications/Shells
 Source0:	http://www.midnight-commander.org/downloads/%{name}-%{version}.tar.bz2
@@ -45,16 +46,8 @@ FTP, view tar, zip files, and poke into RPMs for specific files. :-)
 export X11_WWW="xdg-open"
 %configure \
 	--disable-silent-rules	\
-	--enable-charset	\
-	--with-edit		\
 	--with-gpm-mouse	\
-	--with-mcfs		\
-	--with-pcre		\
-	--with-screen=slang	\
-	--with-vfs		\
-	--with-x 		\
-	--without-debug		\
-	--without-ext2undel
+	--without-debug
 %{__make}
 
 %install
