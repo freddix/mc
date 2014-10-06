@@ -1,12 +1,12 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/.git
 Summary:	A user-friendly file manager and visual shell
 Name:		mc
-Version:	4.8.12
-Release:	2
+Version:	4.8.13
+Release:	1
 License:	GPL v3
 Group:		Applications/Shells
 Source0:	http://www.midnight-commander.org/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	a64c426364bfaee56b628f6c0738aade
+# Source0-md5:	12a521a50da6a86852177591b9623d5e
 Patch0:		%{name}-elinks.patch
 URL:		http://www.ibiblio.org/mc/
 BuildRequires:	autoconf
